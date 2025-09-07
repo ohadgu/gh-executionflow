@@ -1,3 +1,4 @@
+# yaml-language-server: $schema=https://json.schemastore.org/github-workflow.json
 name: Reusable Deploy
 on:
   workflow_call:
@@ -10,7 +11,7 @@ on:
     outputs:
       result:
         description: The result of the deployment operation
-        value: ${{ job.deploy.outputs.outcome }}
+        value: ${{ jobs.deploy.outputs.outcome }}
     # secrets:
     #   some-secret:
     #     required: false
